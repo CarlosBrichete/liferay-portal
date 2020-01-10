@@ -10,6 +10,17 @@ definition {
 		}
 	}
 
+	macro addMoreProperties {
+		var key_propertyOption = "${propertyOption}";
+
+		Click(locator1 = "Segmentation#PROPERTIES_SEARCH");
+
+		DragAndDrop.javaScriptDragAndDropToObject(
+			locator1 = "Segmentation#ADD_FIELD_TYPE",
+			locator2 = "Segmentation#DRAG_AND_DROP_EDIT",
+			value1 = "${propertyOption}");
+	}
+
 	macro addProperties {
 		var key_propertyOption = "${propertyOption}";
 
@@ -29,6 +40,10 @@ definition {
 		Click(
 			locator1 = "Segmentation#CRITERION_INPUT_OPTION",
 			value1 = "${criterionInputOption}");
+	}
+
+	macro deleteProperties {
+		Click(locator1 = "Segmentation#DELETE_SEGMENT");
 	}
 
 	macro editSegment {
@@ -51,6 +66,10 @@ definition {
 		Type(
 			locator1 = "Segmentation#TITLE_FIELD",
 			value1 = "${titleField}");
+	}
+
+	macro selectOrganization {
+		Click(locator1 = "Segmentation#ORGANIZATION_MENU");
 	}
 
 	macro tearDown {
