@@ -2,7 +2,8 @@
 definition {
 
 	// Ignore test until AC connection is full automated
-
+	// Prueba ci:test:relevant
+	
 	property portal.release = "true";
 	property portal.upstream = "quarantine";
 	property testray.main.component.name = "A/B Test";
