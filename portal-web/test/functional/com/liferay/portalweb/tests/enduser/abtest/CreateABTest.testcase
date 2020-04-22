@@ -11,6 +11,10 @@ definition {
 	// User has to be connected to Analytics Cloud
 
 	setUp {
+		var analyticsCloudURL = PropsUtil.get("analytics.cloud.url");
+		
+		Navigator.openURL(baseURL = "${analyticsCloudURL}");
+		
 		TestCase.setUpPortalInstance();
 
 		User.firstLoginPG();
