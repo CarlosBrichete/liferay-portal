@@ -40,7 +40,7 @@ definition {
 			panel = "Control Panel",
 			portlet = "Instance Settings");
 
-		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_DXP_BUTTON");
+		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_BUTTON");
 
 		Click(locator1 = "AnalyticsCloudConnection#DXP_TOKEN_INPUT");
 
