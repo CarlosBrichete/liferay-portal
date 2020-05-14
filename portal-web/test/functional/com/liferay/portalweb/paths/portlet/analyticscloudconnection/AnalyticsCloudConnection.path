@@ -109,6 +109,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>RETRY_BUTTON</td>
+	<td>//*[contains(@class, 'btn btn-primary')]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>SKIP_FOR_NOW_BUTTON</td>
 	<td>//*[contains(@class, 'btn btn-secondary') and text()='Skip for Now']</td>
 	<td></td>
