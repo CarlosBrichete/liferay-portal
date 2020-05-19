@@ -65,7 +65,9 @@ definition {
 
 		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_DXP_BUTTON");
 
-		Click(locator1 = "AnalyticsCloudConnection#DISCONNECT_ANALYTICS_CLOUD_BUTTON");
+		ClickNoError(locator1 = "AnalyticsCloudConnection#DISCONNECT_ANALYTICS_CLOUD_BUTTON");
+
+		AssertConfirm.assertConfirmationNoError(value1 = "Are you sure you want to disconnect your Analytics Cloud workspace from this DXP instance?");
 	}
 
 }

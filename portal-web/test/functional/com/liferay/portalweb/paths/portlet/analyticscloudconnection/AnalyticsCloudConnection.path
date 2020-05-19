@@ -60,7 +60,7 @@
 </tr>
 <tr>
 	<td>DISCONNECT_ANALYTICS_CLOUD_BUTTON</td>
-	<td>//button[contains(@id, '_com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet_tokenButton')]</td>
+	<td>//button[contains(@id, '_com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet_tokenButton')] | //*[contains(@class, 'btn  btn-secondary')]</td>
 	<td></td>
 </tr>
 <tr>

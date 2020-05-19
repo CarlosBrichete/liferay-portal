@@ -53,7 +53,7 @@ definition {
 
 		AnalyticsCloud.teardownAnalyticsCloud();
 
-		SitePages.openPagesAdmin(siteURLKey = "content-page");
+		SitePages.openPagesAdmin(siteURLKey = "guest");
 
 		SitePages.deletePage(pageName = "Content Page");
 
