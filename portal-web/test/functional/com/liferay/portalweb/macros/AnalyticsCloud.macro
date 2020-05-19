@@ -15,7 +15,7 @@ definition {
 
 		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_LOGIN_BUTTON");
 	}
-	
+
 	macro syncAnalyticsCloud {
 		ProductMenu.gotoPortlet(
 			category = "Configuration",

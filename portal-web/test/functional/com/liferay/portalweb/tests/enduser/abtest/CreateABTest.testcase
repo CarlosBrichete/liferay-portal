@@ -9,6 +9,7 @@ definition {
 	property analytics.cloud.enabled = "true";
 
 	setUp {
+
 		// Open Analytics Cloud, login and take the token to connect to DXP
 
 		var analyticsCloudURL = PropsUtil.get("analytics.cloud.url");
