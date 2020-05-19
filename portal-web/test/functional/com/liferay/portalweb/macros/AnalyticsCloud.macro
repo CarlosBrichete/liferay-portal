@@ -16,24 +16,6 @@ definition {
 		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_LOGIN_BUTTON");
 	}
 
-	macro takeTokenFromAnalyticsCloud {
-		Click(locator1 = "AnalyticsCloudConnection#FARO_WORKSPACE_BUTTON");
-
-		Click(locator1 = "AnalyticsCloudConnection#INTRODUCING_PROPERTIES_NEXT_BUTTON");
-
-		Click(locator1 = "AnalyticsCloudConnection#SKIP_FOR_NOW_BUTTON");
-
-		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_SETTINGS_BUTTON");
-
-		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_ADD_DATA_SOURCE_BUTTON");
-
-		Click(locator1 = "AnalyticsCloudConnection#LIFERAY_DXP_SOURCE");
-
-		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_CONNECT_WITH_TOKEN_BUTTON");
-
-		Copy(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_TOKEN_INPUT");
-	}
-	
 	macro syncAnalyticsCloud {
 		ProductMenu.gotoPortlet(
 			category = "Configuration",
@@ -55,6 +37,24 @@ definition {
 		Click(locator1 = "AnalyticsCloudConnection#INPUT_LIFERAY_DXP_CHECKBOX");
 
 		Click(locator1 = "AnalyticsCloudConnection#DONE_BUTTON");
+	}
+
+	macro takeTokenFromAnalyticsCloud {
+		Click(locator1 = "AnalyticsCloudConnection#FARO_WORKSPACE_BUTTON");
+
+		Click(locator1 = "AnalyticsCloudConnection#INTRODUCING_PROPERTIES_NEXT_BUTTON");
+
+		Click(locator1 = "AnalyticsCloudConnection#SKIP_FOR_NOW_BUTTON");
+
+		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_SETTINGS_BUTTON");
+
+		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_ADD_DATA_SOURCE_BUTTON");
+
+		Click(locator1 = "AnalyticsCloudConnection#LIFERAY_DXP_SOURCE");
+
+		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_CONNECT_WITH_TOKEN_BUTTON");
+
+		Copy(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_TOKEN_INPUT");
 	}
 
 	macro teardownAnalyticsCloud {
