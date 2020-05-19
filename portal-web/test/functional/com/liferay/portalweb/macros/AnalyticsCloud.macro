@@ -31,7 +31,7 @@ definition {
 
 		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_CONNECT_WITH_TOKEN_BUTTON");
 
-		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_COPY_TOKEN_BUTTON");
+		Copy(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_TOKEN_INPUT");
 	}
 	
 	macro syncAnalyticsCloud {
@@ -55,6 +55,17 @@ definition {
 		Click(locator1 = "AnalyticsCloudConnection#INPUT_LIFERAY_DXP_CHECKBOX");
 
 		Click(locator1 = "AnalyticsCloudConnection#DONE_BUTTON");
+	}
+
+	macro teardownAnalyticsCloud {
+		ProductMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "Instance Settings");
+
+		Click(locator1 = "AnalyticsCloudConnection#ANALYTICS_CLOUD_DXP_BUTTON");
+
+		Click(locator1 = "AnalyticsCloudConnection#DISCONNECT_ANALYTICS_CLOUD_BUTTON");
 	}
 
 }

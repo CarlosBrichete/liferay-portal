@@ -44,18 +44,23 @@
 	<td></td>
 </tr>
 <tr>
+	<td>ANALYTICS_CLOUD_TOKEN_INPUT</td>
+	<td>//input[contains(@class, 'input-root form-control text-truncate input-group-inset input-group-inset-after')]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>ANALYTICS_CLOUD_CONNECT_WITH_TOKEN_BUTTON</td>
 	<td>//*[contains(@class, 'button-root btn btn-primary')]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>ANALYTICS_CLOUD_COPY_TOKEN_BUTTON</td>
-	<td>//*[contains(@aria-label, 'Click to Copy')]</td>
+	<td>CONNECT_ANALYTICS_CLOUD_BUTTON</td>
+	<td>//button[contains(@id, '_com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet_tokenButton')]</td>
 	<td></td>
 </tr>
 <tr>
-	<td>CONNECT_ANALYTICS_CLOUD_BUTTON</td>
-	<td>//button[contains(@id, ‘_com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet_tokenButton’)]</td>
+	<td>DISCONNECT_ANALYTICS_CLOUD_BUTTON</td>
+	<td>//button[contains(@id, '_com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet_tokenButton')]</td>
 	<td></td>
 </tr>
 <tr>
@@ -65,7 +70,7 @@
 </tr>
 <tr>
 	<td>DXP_TOKEN_INPUT</td>
-	<td>//input[contains(@id, ‘_com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet_token’)]</td>
+	<td>//input[contains(@id, '_com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet_token')]</td>
 	<td></td>
 </tr>
 <tr>
