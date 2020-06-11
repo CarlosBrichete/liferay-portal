@@ -24,6 +24,27 @@ definition {
 		}
 	}
 
+	test AddTest {
+		for (var n : list "1,2,3,4,5") {
+			JSONWebcontent.addWebContent(
+				content = "WC WebContent Content",
+				groupName = "Test Site Name",
+				title = "WC WebContent Title ${n}");
+		}
+
+		WebContentNavigator.openWebContentAdmin(siteURLKey = "test-site-name");
+
+		for (var n : list "1,2,3,4,5") {
+			JSONWebcontent.deleteWebContent(
+				groupName = "Test Site Name",
+				title = "WC WebContent Title ${n}");
+		}
+
+		WebContentNavigator.openWebContentAdmin(siteURLKey = "test-site-name");
+
+		Pause(locator1 = "3000");
+	} 
+
 	@priority = "3"
 	test AddWebContentExpirationDate {
 		property testray.component.names = "Web Content Administration";
