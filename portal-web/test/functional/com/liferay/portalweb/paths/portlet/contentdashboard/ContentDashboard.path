@@ -14,13 +14,33 @@
 	<td></td>
 </tr>
 <tr>
+	<td>FILTER_BY_TAG_OPTION</td>
+	<td>//*[contains(@class, 'dropdown-item') and contains(text(),'Tags')]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>FILTER_BY_TITLE_OPTION</td>
 	<td>//*[contains(@class, 'dropdown-item') and contains(text(),'Title')]</td>
 	<td></td>
 </tr>
 <tr>
+	<td>FIRST_CHECKBOX_TAGS</td>
+	<td>//*[contains(@title,'Select') and contains(@value,'tag1')]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>FIRST_ELEMENT_LISTED</td>
 	<td>(//*[contains(@class, 'text-truncate')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>SECOND_CHECKBOX_TAGS</td>
+	<td>//*[contains(@title,'Select') and contains(@value,'tag2')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>SELECT_TAGS_BUTTON</td>
+	<td>//*[contains(@id,'addButton') and contains(text(),'Select')]</td>
 	<td></td>
 </tr>
 </tbody>
