@@ -33,6 +33,24 @@ definition {
 				title = "WC Title ${count}");
 		}
 
+		ProductMenu.gotoPortlet(
+			category = "Categorization",
+			portlet = "Tags");
+
+		Tag.viewCP(tagName = "tag1");
+
+		PortletEntry.deleteViaToolbar(rowEntries = "tag1");
+
+		Alert.viewSuccessMessage();
+
+		Tag.viewCP(tagName = "tag2");
+
+		PortletEntry.deleteViaToolbar(rowEntries = "tag2");
+
+		Alert.viewSuccessMessage();
+
+		Portlet.viewEmptyMessage(message = "There are no tags.");
+
 		WebContentNavigator.openWebContentAdmin(siteURLKey = "test-site-name");
 
 		if ("${testPortalInstance}" == "true") {
@@ -43,18 +61,21 @@ definition {
 	@description = "Validate if the user can filter by tag"
 	@priority = "5"
 	test ContentDashboardFilterByTag {
+		WebContentNavigator.openWebContentAdmin(siteURLKey = "test-site-name");
+
+		WebContentNavigator.gotoAddCP();
 
 		WebContent.addWithTagCP(
-			webContentContent = "WC WebContent Content First",
-			webContentTitle = "WC WebContent First",
-			tagNameList = "Tag Name List",
-			tagName = "tagfirst");
+			tagNameList = "tag1",
+			webContentContent = "Web Content With tag1",
+			webContentTitle = "Web Content First");
+		
+		WebContentNavigator.gotoAddCP();
 		
 		WebContent.addWithTagCP(
-			webContentContent = "WC WebContent Content Second",
-			webContentTitle = "WC WebContent Second",
-			tagNameList = "Tag Name List",
-			tagName = "tagsecond");
+			tagNameList = "tag2",
+			webContentContent = "Web Content With tag2",
+			webContentTitle = "Web Content Second");
 
 		ApplicationsMenu.gotoPortlet(
 			category = "Content",
@@ -67,11 +88,19 @@ definition {
 
 		AssertTextPresent(
 			locator1 = "ContentDashboard#FIRST_ELEMENT_LISTED",
-			value1 = "WC WebContent First");
+			value1 = "Web Content First");
 
 		AssertTextPresent(
 			locator1 = "ContentDashboard#FIRST_ELEMENT_LISTED",
-			value1 = "WC WebContent Second");
+			value1 = "Web Content Second");
+		
+		JSONWebcontent.deleteWebContent(
+				groupName = "Test Site Name",
+				title = "Web Content First");
+		
+		JSONWebcontent.deleteWebContent(
+				groupName = "Test Site Name",
+				title = "Web Content Second");
 	}
 
 	@description = "Validate if the user can filter by title"

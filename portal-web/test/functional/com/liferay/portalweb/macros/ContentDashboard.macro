@@ -17,7 +17,11 @@ definition {
 
 		Click(locator1 = "ContentDashboard#SECOND_CHECKBOX_TAGS");
 
-		Click(locator1 = "ContentDashboard#SELECT_TAGS_BUTTON");
+		if (IsElementPresent(locator1 = "ContentDashboard#SELECT_TAGS_BUTTON")) {
+			AssertClickNoError(
+				locator1 = "ContentDashboard#SELECT_TAGS_BUTTON",
+				value1 = "Select");
+		}
 	}
 
 	macro filterByTitle {
