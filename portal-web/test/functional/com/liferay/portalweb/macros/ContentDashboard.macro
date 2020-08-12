@@ -17,11 +17,17 @@ definition {
 
 		Click(locator1 = "ContentDashboard#SECOND_CHECKBOX_TAGS");
 
+		SelectFrame(value1 = "relative=top");
+
 		if (IsElementPresent(locator1 = "ContentDashboard#SELECT_TAGS_BUTTON")) {
 			AssertClickNoError(
 				locator1 = "ContentDashboard#SELECT_TAGS_BUTTON",
 				value1 = "Select");
 		}
+
+		SelectFrame(value1 = "relative=top");
+
+		Click(locator1 = "ContentDashboard#REVERSE_SORT_DIRECTION_BUTTON");
 	}
 
 	macro filterByTitle {

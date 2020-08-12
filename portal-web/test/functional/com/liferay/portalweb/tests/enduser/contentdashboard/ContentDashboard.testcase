@@ -37,20 +37,6 @@ definition {
 			category = "Categorization",
 			portlet = "Tags");
 
-		Tag.viewCP(tagName = "tag1");
-
-		PortletEntry.deleteViaToolbar(rowEntries = "tag1");
-
-		Alert.viewSuccessMessage();
-
-		Tag.viewCP(tagName = "tag2");
-
-		PortletEntry.deleteViaToolbar(rowEntries = "tag2");
-
-		Alert.viewSuccessMessage();
-
-		Portlet.viewEmptyMessage(message = "There are no tags.");
-
 		WebContentNavigator.openWebContentAdmin(siteURLKey = "test-site-name");
 
 		if ("${testPortalInstance}" == "true") {
@@ -82,16 +68,14 @@ definition {
 			panel = "Applications",
 			portlet = "Content Dashboard");
 
-		Pause(locator1 = "3000");
-
 		ContentDashboard.filterByTag();
 
 		AssertTextPresent(
-			locator1 = "ContentDashboard#FIRST_ELEMENT_LISTED",
+			locator1 = "ContentDashboard#FIRST_ELEMENT_LISTED_BY_TAG",
 			value1 = "Web Content First");
 
 		AssertTextPresent(
-			locator1 = "ContentDashboard#FIRST_ELEMENT_LISTED",
+			locator1 = "ContentDashboard#SECOND_ELEMENT_LISTED_BY_TAG",
 			value1 = "Web Content Second");
 		
 		JSONWebcontent.deleteWebContent(
@@ -101,6 +85,20 @@ definition {
 		JSONWebcontent.deleteWebContent(
 				groupName = "Test Site Name",
 				title = "Web Content Second");
+
+		Tag.viewCP(tagName = "tag1");
+
+		PortletEntry.deleteViaToolbar(rowEntries = "tag1");
+
+		Alert.viewSuccessMessage();
+
+		Tag.viewCP(tagName = "tag2");
+
+		PortletEntry.deleteViaToolbar(rowEntries = "tag2");
+
+		Alert.viewSuccessMessage();
+
+		Portlet.viewEmptyMessage(message = "There are no tags.");
 	}
 
 	@description = "Validate if the user can filter by title"
@@ -116,7 +114,7 @@ definition {
 		ContentDashboard.filterByTitle();
 
 		AssertTextPresent(
-			locator1 = "ContentDashboard#FIRST_ELEMENT_LISTED",
+			locator1 = "ContentDashboard#FIRST_ELEMENT_LISTED_BY_TITLE",
 			value1 = "WC Title 5");
 	}
 

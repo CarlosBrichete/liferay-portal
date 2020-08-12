@@ -29,13 +29,28 @@
 	<td></td>
 </tr>
 <tr>
-	<td>FIRST_ELEMENT_LISTED</td>
+	<td>FIRST_ELEMENT_LISTED_BY_TAG</td>
+	<td>//*[contains(@class, 'text-truncate') and contains(text(),'First')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FIRST_ELEMENT_LISTED_BY_TITLE</td>
 	<td>(//*[contains(@class, 'text-truncate')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>REVERSE_SORT_DIRECTION_BUTTON</td>
+	<td>(//*[contains(@class, 'lexicon-icon lexicon-icon-order-arrow')])</td>
 	<td></td>
 </tr>
 <tr>
 	<td>SECOND_CHECKBOX_TAGS</td>
 	<td>//*[contains(@title,'Select') and contains(@value,'tag2')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>SECOND_ELEMENT_LISTED_BY_TAG</td>
+	<td>//*[contains(@class, 'text-truncate') and contains(text(),'Second')]</td>
 	<td></td>
 </tr>
 <tr>
