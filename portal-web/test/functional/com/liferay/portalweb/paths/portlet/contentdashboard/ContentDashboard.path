@@ -30,7 +30,7 @@
 </tr>
 <tr>
 	<td>FIRST_ELEMENT_LISTED_BY_TAG</td>
-	<td>//*[contains(@class, 'text-truncate') and contains(text(),'First')]</td>
+	<td>(//*[contains(@class, 'text-truncate')])[6]</td>
 	<td></td>
 </tr>
 <tr>
@@ -40,7 +40,12 @@
 </tr>
 <tr>
 	<td>REVERSE_SORT_DIRECTION_BUTTON</td>
-	<td>(//*[contains(@class, 'lexicon-icon lexicon-icon-order-arrow')])</td>
+	<td>//*[contains(@class, 'lexicon-icon lexicon-icon-order-arrow')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>SEARCH_FIELD</td>
+	<td>//*[contains(@class,'form-control input-group-inset input-group-inset-after')]</td>
 	<td></td>
 </tr>
 <tr>
@@ -50,7 +55,7 @@
 </tr>
 <tr>
 	<td>SECOND_ELEMENT_LISTED_BY_TAG</td>
-	<td>//*[contains(@class, 'text-truncate') and contains(text(),'Second')]</td>
+	<td>//*[contains(@data-qa-id, 'row')]//*[contains(text(), 'Web Content Second')]</td>
 	<td></td>
 </tr>
 <tr>

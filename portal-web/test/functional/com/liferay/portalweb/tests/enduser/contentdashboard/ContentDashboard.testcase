@@ -33,10 +33,6 @@ definition {
 				title = "WC Title ${count}");
 		}
 
-		ProductMenu.gotoPortlet(
-			category = "Categorization",
-			portlet = "Tags");
-
 		WebContentNavigator.openWebContentAdmin(siteURLKey = "test-site-name");
 
 		if ("${testPortalInstance}" == "true") {
@@ -68,16 +64,28 @@ definition {
 			panel = "Applications",
 			portlet = "Content Dashboard");
 
+		Pause(locator1 = "3000");
+
 		ContentDashboard.filterByTag();
 
-		AssertTextPresent(
+		ContentDashboard.searchValue(webContentTitle = "First");
+
+		Pause(locator1 = "3000");
+
+		AssertTextEquals(
 			locator1 = "ContentDashboard#FIRST_ELEMENT_LISTED_BY_TAG",
 			value1 = "Web Content First");
+		
+		ContentDashboard.searchValue(webContentTitle = "Second");
 
-		AssertTextPresent(
-			locator1 = "ContentDashboard#SECOND_ELEMENT_LISTED_BY_TAG",
+		Pause(locator1 = "3000");
+
+		AssertTextEquals(
+			locator1 = "ContentDashboard#FIRST_ELEMENT_LISTED_BY_TAG",
 			value1 = "Web Content Second");
 		
+		WebContentNavigator.gotoAddCP();
+
 		JSONWebcontent.deleteWebContent(
 				groupName = "Test Site Name",
 				title = "Web Content First");
@@ -85,6 +93,10 @@ definition {
 		JSONWebcontent.deleteWebContent(
 				groupName = "Test Site Name",
 				title = "Web Content Second");
+
+		ProductMenu.gotoPortlet(
+			category = "Categorization",
+			portlet = "Tags");
 
 		Tag.viewCP(tagName = "tag1");
 
