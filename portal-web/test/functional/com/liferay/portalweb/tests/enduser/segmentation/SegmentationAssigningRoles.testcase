@@ -127,7 +127,7 @@ definition {
 		User.logoutPG();
 
 		User.loginUserPG(
-			password = "test",
+			password = "password",
 			userEmailAddress = "userea@liferay.com");
 
 		AssertElementNotPresent(locator1 = "ApplicationsMenu#PORTLET");
@@ -153,7 +153,7 @@ definition {
 		User.logoutPG();
 
 		User.loginUserPG(
-			password = "test",
+			password = "password",
 			userEmailAddress = "userea@liferay.com");
 
 		ApplicationsMenuHelper.openApplicationsMenu();
@@ -164,6 +164,23 @@ definition {
 			key_category = "Content",
 			key_portlet = "Content Dashboard",
 			locator1 = "ApplicationsMenu#PORTLET");
+
+		User.logoutPG();
+
+		User.firstLoginPG();
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Segments",
+			configurationName = "Segments Service",
+			configurationScope = "System Scope");
+
+		Segmentation.enableAssingRolesBySegmentsCheckbox();
+
 	}
 
 }
