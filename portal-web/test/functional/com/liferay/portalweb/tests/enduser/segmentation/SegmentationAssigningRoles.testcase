@@ -180,7 +180,6 @@ definition {
 			configurationScope = "System Scope");
 
 		Segmentation.enableAssingRolesBySegmentsCheckbox();
-
 	}
 
 }
