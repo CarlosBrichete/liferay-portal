@@ -36,6 +36,7 @@ definition {
 			portlet = "Users and Organizations");
 
 		User.editPasswordCP(
+			requirePasswordReset = "true",
 			userEmailAddress = "userea@liferay.com",
 			userScreenName = "usersn");
 
@@ -127,7 +128,7 @@ definition {
 		User.logoutPG();
 
 		User.loginUserPG(
-			password = "password",
+			password = "test",
 			userEmailAddress = "userea@liferay.com");
 
 		AssertElementNotPresent(locator1 = "ApplicationsMenu#PORTLET");
@@ -153,7 +154,7 @@ definition {
 		User.logoutPG();
 
 		User.loginUserPG(
-			password = "password",
+			password = "test",
 			userEmailAddress = "userea@liferay.com");
 
 		ApplicationsMenuHelper.openApplicationsMenu();
