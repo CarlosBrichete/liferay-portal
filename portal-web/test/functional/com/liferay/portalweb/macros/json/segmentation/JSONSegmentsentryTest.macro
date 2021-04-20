@@ -1,0 +1,13 @@
+definition {
+
+	@summary = "Basic Smoke test for the JSON WS API macros"
+	macro runSmoke {
+		JSONSegmentsentry.addSegment(
+			fieldName = "Email Address",
+			groupName = "Test Site Name",
+			operator = "contains",
+			segmentName = "New Segment",
+			text = "liferay.com");
+	}
+
+} 

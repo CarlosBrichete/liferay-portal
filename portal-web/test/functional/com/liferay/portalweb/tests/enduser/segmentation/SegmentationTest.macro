@@ -1,0 +1,31 @@
+@component-name = "portal-segmentation"
+definition {
+
+	property portal.release = "true";
+	property portal.upstream = "true";
+	property testray.main.component.name = "Segmentation";
+
+	setUp {
+		TestCase.setUpPortalInstance();
+
+		User.firstLoginPG();
+
+		JSONGroup.addGroup(groupName = "Test Site Name");
+	}
+
+	tearDown {
+		var testPortalInstance = PropsUtil.get("test.portal.instance");
+
+		if ("${testPortalInstance}" == "true") {
+			PortalInstances.tearDownCP();
+		}
+
+	}
+
+	test RunAllJSONMacros {
+		property portal.acceptance = "true";
+
+		JSONSegmentsentryTest.runSmoke();
+	}
+
+}
