@@ -9,7 +9,7 @@ definition {
 		var curl = '''
 			${portalURL}/api/jsonws/segments.segmentsentry/add-segments-entry \
 				 -u test@liferay.com:test \
-				-d segmentsEntryKey='' \
+				-d segmentsEntryKey= \
 				-d nameMap=${nameMap} \
 				-d descriptionMap=${descriptionMap} \
 				-d active=true \
