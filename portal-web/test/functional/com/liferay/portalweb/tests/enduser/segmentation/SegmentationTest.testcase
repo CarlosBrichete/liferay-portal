@@ -26,6 +26,16 @@ definition {
 		property portal.acceptance = "true";
 
 		JSONSegmentsentryTest.runSmoke();
+
+		ProductMenu.gotoSite(site = "Test Site Name");
+
+		ProductMenu.gotoPortlet(
+			category = "People",
+			portlet = "Segments");
+
+		Segmentation.editSegment(entry = "First Segment");
+
+		Segmentation.viewSegment(propertyField = "liferay.com");
 	}
 
 }
