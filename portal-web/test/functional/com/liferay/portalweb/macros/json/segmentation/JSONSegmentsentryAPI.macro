@@ -13,7 +13,7 @@ definition {
 				-d nameMap=${nameMap} \
 				-d descriptionMap=${descriptionMap} \
 				-d active=true \
-				-d criteria=${criteria} \
+				-d <CURL_DATA[criteria=${criteria}]CURL_DATA> \
 				-d type=com.liferay.portal.kernel.model.User \
 				-d serviceContext=${serviceContext}
 		''';
