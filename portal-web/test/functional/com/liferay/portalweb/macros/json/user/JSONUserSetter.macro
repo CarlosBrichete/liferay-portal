@@ -12,6 +12,19 @@ definition {
 		return "${groupId}";
 	}
 
+	macro setServiceContext {
+		if (!(isSet(serviceContext))) {
+			var serviceContext = JSONServiceContextUtil.setServiceContext(
+				addGroupPermissions = "true",
+				addGuestPermissions = "true",
+				assetCategoryIds = "${assetCategoryIds}",
+				assetTagNames = "${assetTagNames}",
+				workflowAction = "${workflowAction}");
+		}
+
+		return "${serviceContext}";
+	}
+	
 	macro setLocale {
 		if (!(isSet(locale))) {
 			var locale = "";
