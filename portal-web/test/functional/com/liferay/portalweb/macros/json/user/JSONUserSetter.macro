@@ -65,6 +65,19 @@ definition {
 		return "${status}";
 	}
 
+	macro setServiceContext {
+		if (!(isSet(serviceContext))) {
+			var serviceContext = JSONServiceContextUtil.setServiceContext(
+				addGroupPermissions = "true",
+				addGuestPermissions = "true",
+				assetCategoryIds = "${assetCategoryIds}",
+				assetTagNames = "${assetTagNames}",
+				workflowAction = "${workflowAction}");
+		}
+
+		return "${serviceContext}";
+	}
+
 	macro setUserFirstName {
 		Variables.assertDefined(parameterList = "${userFirstName}");
 
