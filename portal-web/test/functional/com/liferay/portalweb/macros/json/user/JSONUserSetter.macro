@@ -63,6 +63,7 @@ definition {
 		}
 
 		return "${status}";
+	}
 
 	macro setServiceContext {
 		if (!(isSet(serviceContext))) {
