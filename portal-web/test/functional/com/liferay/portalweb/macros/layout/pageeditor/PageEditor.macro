@@ -1045,23 +1045,6 @@ definition {
 		AssertElementPresent(locator1 = "PageEditor#EXPERIENCE_BUTTON_NAME");
 	}
 
-	macro changeExperienceLanguage {
-		var key_experienceName = "${newExperience}";
-		var key_language = "${language}";
-
-		Click(locator1 = "PageEditor#EXPERIENCE_LABEL");
-
-		Click(locator1 = "PageEditor#EXPERIENCE_SELECT_ITEM");
-
-		PageEditor.clickManagementBar();
-
-		AssertElementPresent(locator1 = "PageEditor#EXPERIENCE_BUTTON_NAME");
-
-		Click(locator1 = "PageEditor#EXPERIENCE_LANGUAGE_SELECTOR");
-
-		Click(locator1 = "PageEditor#EXPERIENCE_LANGUAGE_SELECTOR_LOCALE");
-	}
-
 	macro changeLocale {
 		Click(
 			key_currentLocale = StringUtil.lowerCase("${currentLocale}"),
