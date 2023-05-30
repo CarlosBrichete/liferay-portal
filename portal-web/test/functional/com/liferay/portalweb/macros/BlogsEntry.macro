@@ -1522,7 +1522,10 @@ definition {
 
 			AssertElementPresent(locator1 = "CKEditor#BODY");
 
-			SelectFrame(value1 = "relative=tope");
+			SelectFrame(value1 = "relative=top");
+
+
+
 
 
 
