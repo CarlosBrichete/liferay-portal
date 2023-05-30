@@ -1522,7 +1522,13 @@ definition {
 
 			AssertElementPresent(locator1 = "CKEditor#BODY");
 
-			SelectFrame(value1 = "relative=top");
+			SelectFrame(value1 = "relative=tope");
+
+
+
+
+
+
 
 			if (!(isSet(shareable))) {
 				AssertElementNotPresent(locator1 = "Notifications#NOTIFICATIONS_PORTLET_VERTICAL_ELLIPSIS");
