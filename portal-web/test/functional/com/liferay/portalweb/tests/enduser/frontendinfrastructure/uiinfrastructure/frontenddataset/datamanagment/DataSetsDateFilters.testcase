@@ -14,7 +14,7 @@ definition {
 		User.firstLoginPG();
 
 		task ("Given the creation of a new data set") {
-			FrontendDataSetAdmin.goToDataSetAdminPage();
+			FrontendDataSetAdmin.goToDataSetsAdminPage();
 
 			JSONFrontendDataSetEntries._createDataSetEntry(
 				dataSetName = "Data Set Fields Test",
