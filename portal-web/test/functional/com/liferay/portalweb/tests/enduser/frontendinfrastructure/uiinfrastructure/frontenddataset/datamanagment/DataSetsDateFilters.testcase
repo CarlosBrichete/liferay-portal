@@ -195,6 +195,7 @@ definition {
 
 	@description = "LPS-181281. Confirms the user cannot create a new date filter with invalid date range."
 	@priority = 4
+	@ignore = "Ignored due to LPS-184467"
 	test CannotSaveAnInvalidDateRangeInDateFields {
 		task ("And click on the 'Create Filter' button") {
 			Button.click(button = "Create Filter");
